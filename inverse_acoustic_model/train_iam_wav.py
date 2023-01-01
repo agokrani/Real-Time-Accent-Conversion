@@ -30,7 +30,7 @@ import os
 import numpy as np
 import soundfile as sf
 import yaml
-from tensorflow.keras.mixed_precision import experimental as mixed_precision
+#from tensorflow.keras.mixed_precision import experimental as mixed_precision
 
 import tensorflow_tts
 from tensorflow_tts.configs import (
@@ -41,7 +41,7 @@ from tensorflow_tts.models import (
   TFPQMF,
   TFMelGANMultiScaleDiscriminator,
 )
-from tensorflow_tts.utils import return_strategy
+from tensorflow_tts.utils.strategy import return_strategy
 
 from datasets import Mel
 from rtac.models import MelGANGenerator

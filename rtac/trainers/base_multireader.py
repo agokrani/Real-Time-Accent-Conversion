@@ -1,15 +1,16 @@
 import abc
 import os
 from tqdm import tqdm
-from colorama import Fore
+#from colorama import Fore
 
 import numpy as np
 import tensorflow as tf
 
 from tensorflow_asr.configs.config import RunningConfig
-from tensorflow_asr.utils.utils import get_num_batches, bytes_to_string, get_reduced_length
-from tensorflow_asr.utils.metrics import ErrorRate, wer, cer
-from tensorflow_asr.runners.base_runners import BaseRunner, BaseTrainer
+from tensorflow_asr.utils.math_util import get_num_batches, bytes_to_string, get_reduced_length
+from tensorflow_asr.metrics.error_rates import ErrorRate
+from tensorflow_asr.utils.metric_util import wer, cer
+from tensorflow_tts.trainers.base_trainer import BasedTrainer as BaseTrainer
 
 
 class MultiReaderBaseTrainer(BaseTrainer):

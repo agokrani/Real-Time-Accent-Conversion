@@ -14,7 +14,7 @@ from tensorflow_asr.featurizers.speech_featurizers import (
   normalize_signal,
   preemphasis
 )
-from tensorflow_tts.utils import find_files
+from tensorflow_tts.utils.utils import find_files
 
 def parse_args():
   parser = ArgumentParser()
